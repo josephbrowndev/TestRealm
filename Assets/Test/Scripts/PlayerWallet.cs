@@ -10,8 +10,4 @@ public class PlayerWallet : MonoBehaviour
         total += amount;
         OnTotalChanged?.Invoke(total);
     }
-
-    
-
-
 }
