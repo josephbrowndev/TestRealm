@@ -9,7 +9,7 @@ public class HealthUI : MonoBehaviour
     private void OnEnable() => health.OnHealthChanged += HandleHealthChanged;
     private void OnDisable() => health.OnHealthChanged -= HandleHealthChanged;
 
-    private void Start() => HandleHealthChanged(health.currentHealth);
+    private void Start() => HandleHealthChanged(health.CurrentHealth);
 
     private void HandleHealthChanged(int currentHealth)
     {

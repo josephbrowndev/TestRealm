@@ -3,24 +3,25 @@ using UnityEngine;
 public class Health : MonoBehaviour, IDamageable
 {
     [SerializeField] int maxHealth = 100;
-    public int currentHealth { get; private set;  }
-    public PlayerMover movement;
-
+    public bool IsInvulnerable { get; set; }
+    public int CurrentHealth { get; private set;  }
+    
     public event System.Action<int> OnHealthChanged;
     public event System.Action OnDied;
 
     private void Awake()
     {
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
     }
 
     public void TakeDamage(int amount)
     {
-        if (currentHealth <= 0) return;
+        if (IsInvulnerable) return;
+        if (CurrentHealth <= 0) return;
 
-        currentHealth = Mathf.Max(currentHealth - amount, 0);
-        OnHealthChanged?.Invoke(currentHealth);
-        if (currentHealth == 0)
+        CurrentHealth = Mathf.Max(CurrentHealth - amount, 0);
+        OnHealthChanged?.Invoke(CurrentHealth);
+        if (CurrentHealth == 0)
         {
             OnDied?.Invoke();
         }

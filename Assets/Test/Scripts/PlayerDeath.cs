@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
     [SerializeField] private Health health;
     [SerializeField] private PlayerMover movement;
+    [SerializeField] private PlayerDash dash;
+    private CharacterController controller;
 
     private void OnEnable() => health.OnDied += HandleDied;
     private void OnDisable() => health.OnDied -= HandleDied;
@@ -12,5 +15,7 @@ public class PlayerDeath : MonoBehaviour
     {
         Debug.Log("Player Died");
         movement.enabled = false;
+        dash.enabled = false;
+        
     }
 }

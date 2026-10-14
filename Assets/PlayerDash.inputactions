@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "name": "PlayerDash",
+    "maps": [
+        {
+            "name": "Dash",
+            "id": "dcaa5495-1bcb-4a95-982d-6afae614761f",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "74550554-f293-47d9-a3c6-d190244a856e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "175d92a6-e8f7-437f-a2d3-0768f2ab43e4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
