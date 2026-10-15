@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
@@ -6,8 +5,7 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField] private Health health;
     [SerializeField] private PlayerMover movement;
     [SerializeField] private PlayerDash dash;
-    private CharacterController controller;
-
+ 
     private void OnEnable() => health.OnDied += HandleDied;
     private void OnDisable() => health.OnDied -= HandleDied;
 

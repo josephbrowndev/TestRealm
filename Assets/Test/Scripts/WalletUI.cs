@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
+
 
 public class WalletUI : MonoBehaviour
 {
@@ -19,7 +19,7 @@ public class WalletUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        HandleTotalChanged(wallet.total);
+        HandleTotalChanged(wallet.Total);
     }
 
     private void HandleTotalChanged(int newTotal)

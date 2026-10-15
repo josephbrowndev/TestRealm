@@ -1,9 +1,5 @@
-using System;
-using Unity.AppUI.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
-using UnityEngine.UIElements;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMover : MonoBehaviour
